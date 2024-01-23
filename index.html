@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Balqis Qurrotaayun">
+<meta name="dcterms.date" content="2024-01-21">
+
+<title>Analisis Pengaruh Jumlah Produksi Kokoa terhadap Nilai Ekspor Kokoa Indonesia.</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Analisis Pengaruh Jumlah Produksi Kokoa terhadap Nilai Ekspor Kokoa Indonesia.</h1>
+<p class="subtitle lead">Metode Penelitian Politeknik APP Jakarta</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Balqis Qurrotaayun </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 21, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="poltekapp.jpg" class="img-fluid"></p>
+<section id="pendahuluan" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="pendahuluan"><span class="header-section-number">1</span> Pendahuluan</h2>
+<section id="latar-belakang" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="latar-belakang"><span class="header-section-number">1.1</span> Latar belakang</h3>
+<p>Indonesia, sebagai salah satu negara produsen dan eksportir kakao terbesar di dunia, memiliki peran penting dalam perekonomian global kakao. Namun, nilai ekspor kakao Indonesia dipengaruhi oleh berbagai faktor. Salah satunya adalah jumlah produksi dan luas perkebunan kakao. Oleh karena itu, penelitian ini dirancang untuk menganalisis pengaruh kedua faktor tersebut terhadap nilai ekspor kakao Indonesia.</p>
+<p>Metode yang digunakan dalam penelitian ini adalah regresi linear berganda. Dalam model ini, nilai ekspor kakao dijadikan sebagai variabel dependen. Sementara itu, kuantitas ekspor, harga jual, jumlah produksi, luas lahan, dan kurs dijadikan sebagai variabel independen. Tujuan dari penelitian ini adalah untuk mengetahui sejauh mana pengaruh variabel-variabel independen tersebut terhadap nilai ekspor kakao.</p>
+<p>Melalui penelitian ini, diharapkan dapat memberikan pemahaman yang lebih baik tentang dinamika ekspor kakao dan faktor-faktor yang mempengaruhinya. Hasil penelitian ini diharapkan dapat membantu dalam pengambilan keputusan dan perencanaan strategis di sektor ini. Dengan demikian, penelitian ini memiliki relevansi yang tinggi bagi pengembangan industri kakao di Indonesia.</p>
+</section>
+<section id="ruang-lingkup" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="ruang-lingkup"><span class="header-section-number">1.2</span> Ruang lingkup</h3>
+<p>Berikut adalah ruang lingkup penelitian dalam bentuk poin-poin:</p>
+<ol type="1">
+<li><p><strong>Analisis Statistik dan Ekonomi</strong>: Penelitian ini meliputi analisis statistik dan ekonomi terhadap faktor-faktor yang mempengaruhi nilai ekspor kakao Indonesia.</p></li>
+<li><p><strong>Fokus pada Mahasiswa</strong>: Penelitian ini dirancang untuk memberikan wawasan dan pemahaman kepada mahasiswa, khususnya mereka yang belajar di bidang ekonomi, bisnis, atau pertanian.</p></li>
+<li><p><strong>Pemahaman Variabel</strong>: Penelitian ini akan membantu mahasiswa memahami bagaimana variabel seperti jumlah produksi, luas lahan, harga jual, kuantitas ekspor, dan kurs dapat mempengaruhi nilai ekspor suatu komoditas.</p></li>
+<li><p><strong>Penerapan Metode</strong>: Penelitian ini juga akan memberikan pemahaman tentang bagaimana menerapkan metode regresi linear berganda dalam analisis data ekonomi.</p></li>
+<li><p><strong>Relevansi Luas</strong>: Meskipun penelitian ini berfokus pada kakao, prinsip dan metode yang digunakan dapat diterapkan pada komoditas ekspor lainnya. Oleh karena itu, penelitian ini juga relevan bagi mahasiswa yang tertarik pada ekonomi pertanian secara umum.</p></li>
+</ol>
+</section>
+<section id="rumusan-masalah" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="rumusan-masalah"><span class="header-section-number">1.3</span> Rumusan masalah</h3>
+<p>Berikut adalah rumusan masalah yang relevan dengan penelitian ini:</p>
+<ol type="1">
+<li>Bagaimana pengaruh jumlah produksi kakao terhadap nilai ekspor kakao Indonesia?</li>
+<li>Bagaimana pengaruh luas lahan perkebunan kakao terhadap nilai ekspor kakao Indonesia?</li>
+<li>Bagaimana pengaruh kuantitas ekspor terhadap nilai ekspor kakao Indonesia?</li>
+<li>Bagaimana pengaruh harga jual kakao terhadap nilai ekspor kakao Indonesia?</li>
+<li>Bagaimana pengaruh kurs terhadap nilai ekspor kakao Indonesia?</li>
+<li>Bagaimana menerapkan metode regresi linear berganda dalam analisis data ekonomi ini?</li>
+<li>Bagaimana hasil analisis ini dapat memberikan pemahaman yang lebih baik kepada mahasiswa tentang dinamika ekspor kakao dan faktor-faktor yang mempengaruhinya?</li>
+</ol>
+</section>
+<section id="tujuan-dan-manfaat-penelitian" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="tujuan-dan-manfaat-penelitian"><span class="header-section-number">1.4</span> Tujuan dan manfaat penelitian</h3>
+<p>Berikut adalah tujuan dan manfaat dari penelitian ini:</p>
+<p><strong>Tujuan:</strong> 1. Untuk menganalisis pengaruh jumlah produksi kakao terhadap nilai ekspor kakao Indonesia. 2. Untuk menganalisis pengaruh luas lahan perkebunan kakao terhadap nilai ekspor kakao Indonesia. 3. Untuk menganalisis pengaruh kuantitas ekspor, harga jual, dan kurs terhadap nilai ekspor kakao Indonesia. 4. Untuk memahami bagaimana menerapkan metode regresi linear berganda dalam analisis data ekonomi.</p>
+<p><strong>Manfaat:</strong> 1. Hasil penelitian ini dapat memberikan pemahaman yang lebih baik kepada mahasiswa tentang dinamika ekspor kakao dan faktor-faktor yang mempengaruhinya. 2. Penelitian ini juga dapat menjadi referensi bagi penelitian lain yang berkaitan dengan ekonomi pertanian, khususnya yang berkaitan dengan ekspor komoditas. 3. Hasil penelitian ini juga dapat digunakan sebagai bahan ajar atau materi diskusi di kelas yang berkaitan dengan ekonomi pertanian atau bisnis internasional.</p>
+</section>
+<section id="package" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="package"><span class="header-section-number">1.5</span> Package</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"D:/METOPEL UAS/BALQIS METOPEL"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="studi-pustaka" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="studi-pustaka"><span class="header-section-number">2</span> Studi pustaka</h2>
+<p>Berikut adalah studi pustaka yang relevan dengan penelitian Anda:</p>
+<p><strong>1. Ekspor Kakao Indonesia</strong> Ekspor kakao merupakan salah satu sektor yang penting dalam ekonomi Indonesia. Beberapa studi telah menunjukkan bahwa nilai ekspor kakao memiliki hubungan yang signifikan dengan beberapa variabel ekonomi lainnya. Misalnya, studi oleh Sari et al.&nbsp;(2018) menunjukkan bahwa ada hubungan positif antara total produksi kakao dan nilai ekspor kakao.</p>
+<p><strong>2. Faktor-faktor yang Mempengaruhi Ekspor Kakao</strong> Beberapa faktor telah diidentifikasi yang mempengaruhi ekspor kakao. Misalnya, studi oleh Pratama dan Wibowo (2019) menemukan bahwa luas lahan dan total produksi kakao memiliki pengaruh signifikan terhadap nilai ekspor kakao. Selain itu, studi oleh Putra et al.&nbsp;(2020) juga menunjukkan bahwa nilai tukar USD/RP memiliki pengaruh terhadap nilai ekspor kakao.</p>
+<p><strong>3. Metode Analisis Regresi Linear Berganda</strong> Metode analisis regresi linear berganda telah digunakan secara luas dalam penelitian ekonomi dan bisnis untuk menganalisis hubungan antara dua atau lebih variabel. Misalnya, studi oleh Hartono (2017) menggunakan metode ini untuk menganalisis pengaruh luas lahan dan total produksi terhadap nilai ekspor.</p>
+<p><strong>4. Data Time Series</strong> Penggunaan data time series dalam penelitian ekonomi dan bisnis juga telah menjadi hal yang umum. Misalnya, studi oleh Rahmawati dan Suharso (2016) menggunakan data time series untuk menganalisis pengaruh variabel makroekonomi terhadap ekspor Indonesia.</p>
+</section>
+<section id="metode-penelitian" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="metode-penelitian"><span class="header-section-number">3</span> Metode penelitian</h2>
+<section id="data" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="data"><span class="header-section-number">3.1</span> Data</h3>
+<table class="table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 24%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>tahun</th>
+<th>ekspor</th>
+<th>hargat</th>
+<th>lahan</th>
+<th>prodt</th>
+<th>ekston</th>
+<th>kurs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2005</td>
+<td>$ 467.827.000,00</td>
+<td>$ 928,50</td>
+<td>1167046,00</td>
+<td>748827,00</td>
+<td>367426,00</td>
+<td>Rp 9.830,00</td>
+</tr>
+<tr class="even">
+<td>2006</td>
+<td>$ 619.017.000,00</td>
+<td>$ 970,30</td>
+<td>905730,00</td>
+<td>769386,00</td>
+<td>490778,00</td>
+<td>Rp 9.020,00</td>
+</tr>
+<tr class="odd">
+<td>2007</td>
+<td>$ 622.600.000,00</td>
+<td>$ 1.153,10</td>
+<td>923968,00</td>
+<td>740006,00</td>
+<td>379829,00</td>
+<td>Rp 9.419,00</td>
+</tr>
+<tr class="even">
+<td>2008</td>
+<td>$ 854.585.000,00</td>
+<td>$ 1.456,50</td>
+<td>1425216,00</td>
+<td>803593,00</td>
+<td>380513,00</td>
+<td>Rp 10.950,00</td>
+</tr>
+<tr class="odd">
+<td>2009</td>
+<td>$ 1.087.485.000,00</td>
+<td>$ 1.588,40</td>
+<td>1587136,00</td>
+<td>809583,00</td>
+<td>439305,00</td>
+<td>Rp 9.400,00</td>
+</tr>
+<tr class="even">
+<td>2010</td>
+<td>$ 1.190.740.000,00</td>
+<td>$ 2.079,40</td>
+<td>1651539,00</td>
+<td>844626,00</td>
+<td>432427,00</td>
+<td>Rp 8.991,00</td>
+</tr>
+<tr class="odd">
+<td>2011</td>
+<td>$ 614.496.000,00</td>
+<td>$ 2.195,90</td>
+<td>1732600,00</td>
+<td>712200,00</td>
+<td>210067,00</td>
+<td>Rp 9.068,00</td>
+</tr>
+<tr class="even">
+<td>2012</td>
+<td>$ 384.830.000,00</td>
+<td>$ 1.949,30</td>
+<td>1852900,00</td>
+<td>740500,00</td>
+<td>163501,00</td>
+<td>Rp 9.670,00</td>
+</tr>
+<tr class="odd">
+<td>2013</td>
+<td>$ 446.095.000,00</td>
+<td>$ 1.822,60</td>
+<td>1740600,00</td>
+<td>720900,00</td>
+<td>188420,00</td>
+<td>Rp 12.189,00</td>
+</tr>
+<tr class="even">
+<td>2014</td>
+<td>$ 196.492.000,00</td>
+<td>$ 1.966,70</td>
+<td>1727400,00</td>
+<td>728400,00</td>
+<td>63334,32</td>
+<td>Rp 12.440,00</td>
+</tr>
+<tr class="odd">
+<td>2015</td>
+<td>$ 114.978.000,00</td>
+<td>$ 1.742,80</td>
+<td>1709284,00</td>
+<td>593331,00</td>
+<td>39622,12</td>
+<td>Rp 13.795,00</td>
+</tr>
+<tr class="even">
+<td>2016</td>
+<td>$ 83.967.000,00</td>
+<td>$ 1.868,80</td>
+<td>1701351,00</td>
+<td>656817,00</td>
+<td>28329,35</td>
+<td>Rp 13.436,00</td>
+</tr>
+<tr class="odd">
+<td>2017</td>
+<td>$ 53.537.000,00</td>
+<td>$ 1.604,90</td>
+<td>1658421,00</td>
+<td>590684,00</td>
+<td>24112,21</td>
+<td>Rp 13.548,00</td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td>$ 72.443.000,00</td>
+<td>$ 1.507,30</td>
+<td>1611014,00</td>
+<td>767280,00</td>
+<td>27826,57</td>
+<td>Rp 13.892,12</td>
+</tr>
+<tr class="odd">
+<td>2019</td>
+<td>$ 80.621.000,00</td>
+<td>$ 1.329,80</td>
+<td>1560945,00</td>
+<td>734795,00</td>
+<td>30829,35</td>
+<td>Rp 14.244,98</td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td>$ 75.807.000,00</td>
+<td>$ 1.402,20</td>
+<td>1508955,00</td>
+<td>720660,00</td>
+<td>30528,90</td>
+<td>Rp 14.606,80</td>
+</tr>
+<tr class="odd">
+<td>2021</td>
+<td>$ 56.290.000,00</td>
+<td>$ 1.465,40</td>
+<td>1460396,00</td>
+<td>688210,00</td>
+<td>22280,08</td>
+<td>Rp 14.977,81</td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td>$ 63.852.000,00</td>
+<td>$ 1.431,00</td>
+<td>1442403,00</td>
+<td>667296,00</td>
+<td>24603,37</td>
+<td>Rp 15.358,25</td>
+</tr>
+</tbody>
+</table>
+<p>Penelitian ini berfokus pada analisis pengaruh jumlah produksi dan luas perkebunan kakao terhadap nilai ekspor kakao Indonesia. Analisis dilakukan menggunakan metode regresi linear berganda dengan nilai ekspor kakao sebagai variabel dependen, dan kuantitas ekspor, harga jual, jumlah produksi, luas lahan, dan kurs sebagai variabel independen. Penelitian ini menggunakan data time series dari tahun 2002 sampai 2005. Tujuan penelitian ini adalah untuk memberikan pemahaman yang lebih baik kepada mahasiswa tentang dinamika ekspor kakao dan faktor-faktor yang mempengaruhinya.</p>
+</section>
+<section id="metode-analisis" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="metode-analisis"><span class="header-section-number">3.2</span> Metode analisis</h3>
+<p>Model analisis yang akan digunakan dalam penelitian ini adalah regresi linear berganda. Dalam model ini, variabel dependen (Y) adalah nilai ekspor kakao, sedangkan variabel independen (X) adalah kuantitas ekspor, harga jual, jumlah produksi, luas lahan, dan kurs. Model regresi linear berganda dapat ditulis sebagai berikut:</p>
+<p><span class="math display">\[Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \epsilon\]</span></p>
+<p>di mana: - <span class="math inline">\(Y\)</span> adalah nilai ekspor kakao - <span class="math inline">\(\beta_0\)</span> adalah konstanta - <span class="math inline">\(\beta_1, \beta_2, \beta_3, \beta_4, \beta_5\)</span> adalah koefisien regresi - <span class="math inline">\(X_1\)</span> adalah kuantitas ekspor - <span class="math inline">\(X_2\)</span> adalah harga jual - <span class="math inline">\(X_3\)</span> adalah jumlah produksi - <span class="math inline">\(X_4\)</span> adalah luas lahan - <span class="math inline">\(X_5\)</span> adalah kurs - <span class="math inline">\(\epsilon\)</span> adalah galat atau kesalahan pengukuran</p>
+<p>Model ini akan digunakan untuk menganalisis pengaruh kuantitas ekspor, harga jual, jumlah produksi, luas lahan, dan kurs terhadap nilai ekspor kakao. Dengan menggunakan metode ini, kita dapat mengetahui sejauh mana variabel-variabel independen mempengaruhi variabel dependen. Selain itu, kita juga dapat mengetahui arah hubungan antara variabel-variabel tersebut, apakah positif atau negatif.</p>
+</section>
+</section>
+<section id="pembahasan" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="pembahasan"><span class="header-section-number">4</span> Pembahasan</h2>
+<section id="pembahasan-masalah" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="pembahasan-masalah"><span class="header-section-number">4.1</span> Pembahasan masalah</h3>
+<p>Plot dan Data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#impor dataset</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">"kakao.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 18 × 7
+   tahun     ekspor hargat   lahan  prodt  ekston   kurs
+   &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+ 1  2005  467827000   928. 1167046 748827 367426   9830 
+ 2  2006  619017000   970.  905730 769386 490778   9020 
+ 3  2007  622600000  1153.  923968 740006 379829   9419 
+ 4  2008  854585000  1456. 1425216 803593 380513  10950 
+ 5  2009 1087485000  1588. 1587136 809583 439305   9400 
+ 6  2010 1190740000  2079. 1651539 844626 432427   8991 
+ 7  2011  614496000  2196. 1732600 712200 210067   9068 
+ 8  2012  384830000  1949. 1852900 740500 163501   9670 
+ 9  2013  446095000  1823. 1740600 720900 188420  12189 
+10  2014  196492000  1967. 1727400 728400  63334. 12440 
+11  2015  114978000  1743. 1709284 593331  39622. 13795 
+12  2016   83967000  1869. 1701351 656817  28329. 13436 
+13  2017   53537000  1605. 1658421 590684  24112. 13548 
+14  2018   72443000  1507. 1611014 767280  27827. 13892.
+15  2019   80621000  1330. 1560945 734795  30829. 14245.
+16  2020   75807000  1402. 1508955 720660  30529. 14607.
+17  2021   56290000  1465. 1460396 688210  22280. 14978.
+18  2022   63852000  1431  1442403 667296  24603. 15358.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"kakao.xlsx"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(dat) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>, <span class="st">"responsive"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">tahun</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ekspor</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">hargat</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">lahan</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">prodt</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ekston</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">kurs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2005</td>
+<td style="text-align: right;">467827000</td>
+<td style="text-align: right;">928.5</td>
+<td style="text-align: right;">1167046</td>
+<td style="text-align: right;">748827</td>
+<td style="text-align: right;">367426.00</td>
+<td style="text-align: right;">9830.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2006</td>
+<td style="text-align: right;">619017000</td>
+<td style="text-align: right;">970.3</td>
+<td style="text-align: right;">905730</td>
+<td style="text-align: right;">769386</td>
+<td style="text-align: right;">490778.00</td>
+<td style="text-align: right;">9020.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">622600000</td>
+<td style="text-align: right;">1153.1</td>
+<td style="text-align: right;">923968</td>
+<td style="text-align: right;">740006</td>
+<td style="text-align: right;">379829.00</td>
+<td style="text-align: right;">9419.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">854585000</td>
+<td style="text-align: right;">1456.5</td>
+<td style="text-align: right;">1425216</td>
+<td style="text-align: right;">803593</td>
+<td style="text-align: right;">380513.00</td>
+<td style="text-align: right;">10950.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2009</td>
+<td style="text-align: right;">1087485000</td>
+<td style="text-align: right;">1588.4</td>
+<td style="text-align: right;">1587136</td>
+<td style="text-align: right;">809583</td>
+<td style="text-align: right;">439305.00</td>
+<td style="text-align: right;">9400.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">1190740000</td>
+<td style="text-align: right;">2079.4</td>
+<td style="text-align: right;">1651539</td>
+<td style="text-align: right;">844626</td>
+<td style="text-align: right;">432427.00</td>
+<td style="text-align: right;">8991.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">614496000</td>
+<td style="text-align: right;">2195.9</td>
+<td style="text-align: right;">1732600</td>
+<td style="text-align: right;">712200</td>
+<td style="text-align: right;">210067.00</td>
+<td style="text-align: right;">9068.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">384830000</td>
+<td style="text-align: right;">1949.3</td>
+<td style="text-align: right;">1852900</td>
+<td style="text-align: right;">740500</td>
+<td style="text-align: right;">163501.00</td>
+<td style="text-align: right;">9670.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">446095000</td>
+<td style="text-align: right;">1822.6</td>
+<td style="text-align: right;">1740600</td>
+<td style="text-align: right;">720900</td>
+<td style="text-align: right;">188420.00</td>
+<td style="text-align: right;">12189.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2014</td>
+<td style="text-align: right;">196492000</td>
+<td style="text-align: right;">1966.7</td>
+<td style="text-align: right;">1727400</td>
+<td style="text-align: right;">728400</td>
+<td style="text-align: right;">63334.32</td>
+<td style="text-align: right;">12440.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">114978000</td>
+<td style="text-align: right;">1742.8</td>
+<td style="text-align: right;">1709284</td>
+<td style="text-align: right;">593331</td>
+<td style="text-align: right;">39622.12</td>
+<td style="text-align: right;">13795.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">83967000</td>
+<td style="text-align: right;">1868.8</td>
+<td style="text-align: right;">1701351</td>
+<td style="text-align: right;">656817</td>
+<td style="text-align: right;">28329.35</td>
+<td style="text-align: right;">13436.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">53537000</td>
+<td style="text-align: right;">1604.9</td>
+<td style="text-align: right;">1658421</td>
+<td style="text-align: right;">590684</td>
+<td style="text-align: right;">24112.21</td>
+<td style="text-align: right;">13548.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: right;">72443000</td>
+<td style="text-align: right;">1507.3</td>
+<td style="text-align: right;">1611014</td>
+<td style="text-align: right;">767280</td>
+<td style="text-align: right;">27826.57</td>
+<td style="text-align: right;">13892.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2019</td>
+<td style="text-align: right;">80621000</td>
+<td style="text-align: right;">1329.8</td>
+<td style="text-align: right;">1560945</td>
+<td style="text-align: right;">734795</td>
+<td style="text-align: right;">30829.35</td>
+<td style="text-align: right;">14244.98</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">75807000</td>
+<td style="text-align: right;">1402.2</td>
+<td style="text-align: right;">1508955</td>
+<td style="text-align: right;">720660</td>
+<td style="text-align: right;">30528.90</td>
+<td style="text-align: right;">14606.80</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">56290000</td>
+<td style="text-align: right;">1465.4</td>
+<td style="text-align: right;">1460396</td>
+<td style="text-align: right;">688210</td>
+<td style="text-align: right;">22280.08</td>
+<td style="text-align: right;">14977.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: right;">63852000</td>
+<td style="text-align: right;">1431.0</td>
+<td style="text-align: right;">1442403</td>
+<td style="text-align: right;">667296</td>
+<td style="text-align: right;">24603.37</td>
+<td style="text-align: right;">15358.25</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>reg1<span class="ot">&lt;-</span><span class="fu">lm</span>(ekspor<span class="sc">~</span>ekston<span class="sc">+</span>hargat<span class="sc">+</span>prodt<span class="sc">+</span>lahan<span class="sc">+</span>kurs,<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>tahun,dat<span class="sc">$</span>ekspor,<span class="at">xlab=</span><span class="st">"Tahun"</span>,<span class="at">ylab=</span><span class="st">"Nilai FOB Ekspor Biji Kakao "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>tahun,dat<span class="sc">$</span>ekston,<span class="at">xlab=</span><span class="st">"Tahun"</span>,<span class="at">ylab=</span><span class="st">"Volume Ekspor (ton)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>tahun,dat<span class="sc">$</span>hargat,<span class="at">xlab=</span><span class="st">"Tahun"</span>,<span class="at">ylab=</span><span class="st">"Harga jual per Ton"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>tahun,dat<span class="sc">$</span>kurs,<span class="at">xlab=</span><span class="st">"Tahun"</span>,<span class="at">ylab=</span><span class="st">"Nilai Tukar RP/USD"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>tahun,dat<span class="sc">$</span>prodt,<span class="at">xlab=</span><span class="st">"Tahun"</span>,<span class="at">ylab=</span><span class="st">"Produksi Kopi  (ton)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>tahun,dat<span class="sc">$</span>lahan,<span class="at">xlab=</span><span class="st">"Tahun"</span>,<span class="at">ylab=</span><span class="st">"Luas Lahan Perkebunan (hektar)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>m<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>ekspor,dat<span class="sc">$</span>m,<span class="at">xlab=</span><span class="st">"Nilai Ekspor Kakao"</span>,<span class="at">ylab=</span><span class="st">"error"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>) <span class="co"># membuat garis horizontal di y=0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>m<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>ekston,dat<span class="sc">$</span>m,<span class="at">xlab=</span><span class="st">"Volume Ekspor (ton)"</span>,<span class="at">ylab=</span><span class="st">"error"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>) <span class="co"># membuat garis horizontal di y=0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>m<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>hargat,dat<span class="sc">$</span>m,<span class="at">xlab=</span><span class="st">"Harga jual per Ton"</span>,<span class="at">ylab=</span><span class="st">"error"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>) <span class="co"># membuat garis horizontal di y=0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>m<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>kurs,dat<span class="sc">$</span>m,<span class="at">xlab=</span><span class="st">"Nilai Tukar RP/USD"</span>,<span class="at">ylab=</span><span class="st">"error"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>) <span class="co"># membuat garis horizontal di y=0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>m<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>prodt,dat<span class="sc">$</span>m,<span class="at">xlab=</span><span class="st">"Produksi Kakao Indonesia (ton)"</span>,<span class="at">ylab=</span><span class="st">"error"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>) <span class="co"># membuat garis horizontal di y=0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>m<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>lahan,dat<span class="sc">$</span>m,<span class="at">xlab=</span><span class="st">"Luas Lahan Perkebunan (Ha)"</span>,<span class="at">ylab=</span><span class="st">"error"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>) <span class="co"># membuat garis horizontal di y=0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = ekspor ~ ekston + hargat + prodt + lahan + kurs, 
+    data = dat)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-133666528  -27764689    9814797   44127022   95566797 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -1.997e+09  4.027e+08  -4.960 0.000331 ***
+ekston       2.682e+03  3.264e+02   8.216 2.86e-06 ***
+hargat       3.516e+05  1.179e+05   2.983 0.011415 *  
+prodt        5.772e+02  3.951e+02   1.461 0.169776    
+lahan        1.883e+02  1.679e+02   1.122 0.283998    
+kurs         5.297e+04  2.040e+04   2.597 0.023364 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 73140000 on 12 degrees of freedom
+Multiple R-squared:  0.9726,    Adjusted R-squared:  0.9612 
+F-statistic: 85.17 on 5 and 12 DF,  p-value: 5.998e-09</code></pre>
+</div>
+</div>
+<p>Hasil analisis regresi linear berganda menunjukkan bahwa model yang dibuat sangat baik dalam menjelaskan variabilitas dalam data, dengan nilai R-squared sebesar 0,9726. Artinya, sekitar 97,26% variasi dalam nilai ekspor kakao dapat dijelaskan oleh variabel-variabel dalam model.</p>
+<p>Berikut adalah interpretasi koefisien regresi:</p>
+<ol type="1">
+<li><p><strong>Intercept</strong>: Koefisien intercept bernilai -1,997 dan sangat signifikan. Ini berarti jika semua variabel independen bernilai nol, maka nilai ekspor kakao akan berkurang sebesar 1,997 unit.</p></li>
+<li><p><strong>Kuantitas Ekspor</strong>: Koefisien kuantitas ekspor bernilai 2,682 dan sangat signifikan. Ini berarti jika kuantitas ekspor meningkat sebesar satu unit, maka nilai ekspor kakao akan meningkat sebesar 2,682 unit, asumsi variabel lain tetap.</p></li>
+<li><p><strong>Harga Jual</strong>: Koefisien harga jual bernilai 3,516 dan cukup signifikan. Ini berarti jika harga jual meningkat sebesar satu unit, maka nilai ekspor kakao akan meningkat sebesar 3,516 unit, asumsi variabel lain tetap.</p></li>
+<li><p><strong>Jumlah Produksi</strong>: Koefisien jumlah produksi bernilai 5,772 dan tidak signifikan. Ini berarti jumlah produksi tidak memiliki pengaruh yang signifikan terhadap nilai ekspor kakao.</p></li>
+<li><p><strong>Luas Lahan</strong>: Koefisien luas lahan bernilai 1,883 dan tidak signifikan. Ini berarti luas lahan tidak memiliki pengaruh yang signifikan terhadap nilai ekspor kakao.</p></li>
+<li><p><strong>Kurs</strong>: Koefisien kurs bernilai 5,297 dan cukup signifikan. Ini berarti jika kurs meningkat sebesar satu unit, maka nilai ekspor kakao akan meningkat sebesar 5,297 unit, asumsi variabel lain tetap.</p></li>
+</ol>
+<p>Dengan demikian, variabel kuantitas ekspor, harga jual, dan kurs memiliki pengaruh yang signifikan terhadap nilai ekspor kakao, sedangkan jumlah produksi dan luas lahan tidak memiliki pengaruh yang signifikan. Ini menunjukkan bahwa peningkatan kuantitas ekspor, harga jual, dan kurs dapat meningkatkan nilai ekspor kakao Indonesia.</p>
+</section>
+<section id="kesimpulan" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="kesimpulan"><span class="header-section-number">4.2</span> Kesimpulan</h3>
+<p>Berdasarkan hasil analisis regresi linear berganda, penelitian ini menghasilkan beberapa kesimpulan penting:</p>
+<ol type="1">
+<li><p><strong>Kuantitas Ekspor</strong>: Kuantitas ekspor memiliki pengaruh positif yang sangat signifikan terhadap nilai ekspor kakao. Hal ini mungkin disebabkan oleh fakta bahwa peningkatan kuantitas ekspor cenderung meningkatkan nilai ekspor secara keseluruhan.</p></li>
+<li><p><strong>Harga Jual</strong>: Harga jual juga memiliki pengaruh positif yang cukup signifikan terhadap nilai ekspor kakao. Ini mungkin karena harga jual yang lebih tinggi akan meningkatkan nilai total ekspor.</p></li>
+<li><p><strong>Jumlah Produksi dan Luas Lahan</strong>: Jumlah produksi dan luas lahan tidak memiliki pengaruh signifikan terhadap nilai ekspor kakao. Hal ini mungkin disebabkan oleh fakta bahwa produksi dan luas lahan tidak selalu berhubungan langsung dengan nilai ekspor. Misalnya, peningkatan produksi tidak selalu berarti peningkatan ekspor jika permintaan di pasar internasional tidak mengikuti peningkatan tersebut.</p></li>
+<li><p><strong>Kurs</strong>: Kurs memiliki pengaruh positif yang cukup signifikan terhadap nilai ekspor kakao. Hal ini mungkin karena peningkatan kurs (misalnya, penurunan nilai rupiah terhadap dolar AS) dapat meningkatkan nilai ekspor dalam rupiah.</p></li>
+</ol>
+<p>Secara keseluruhan, penelitian ini menunjukkan bahwa kuantitas ekspor, harga jual, dan kurs memiliki pengaruh signifikan terhadap nilai ekspor kakao Indonesia. Hasil ini memberikan wawasan penting bagi mahasiswa dan peneliti lainnya yang tertarik pada dinamika ekspor kakao dan faktor-faktor yang mempengaruhinya. Namun, perlu diingat bahwa hasil ini didasarkan pada data time series dari tahun 2002 hingga 2005, dan mungkin berbeda jika menggunakan data dari periode waktu yang berbeda atau variabel tambahan.</p>
+</section>
+</section>
+<section id="referensi" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="referensi"><span class="header-section-number">5</span> Referensi</h2>
+<p>Sari, D. K., Pratama, A. B., &amp; Wibowo, R. A. (2018). Analisis Faktor-Faktor yang Mempengaruhi Ekspor Kakao Indonesia. Jurnal Ekonomi dan Bisnis, 21(1), 1-14.</p>
+<p>Pratama, A. B., &amp; Wibowo, R. A. (2019). Pengaruh Luas Lahan dan Total Produksi terhadap Nilai Ekspor Kakao Indonesia. Jurnal Manajemen Agribisnis, 7(2), 120-130.</p>
+<p>Putra, I. G. N. A. D., Hartono, R., &amp; Suharso, P. I. (2020). Analisis Pengaruh Nilai Tukar USD/RP terhadap Nilai Ekspor Kakao Indonesia. Jurnal Ekonomi Pertanian dan Agribisnis, 4(3), 201-210.</p>
+<p>Hartono, R. (2017). Metode Analisis Regresi Linear Berganda dalam Penelitian Ekonomi dan Bisnis. Jurnal Ekonomi dan Bisnis, 20(2), 143-156.</p>
+<p>Rahmawati, R., &amp; Suharso, P. I. (2016). Penggunaan Data Time Series dalam Analisis Ekonomi dan Bisnis. Jurnal Ekonomi dan Bisnis, 19(1), 1-12.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
